@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build && npx run sync",
+    "build": "vite build && npx cap sync",
     "test": "vitest --pool=vmThreads",
     "start:android": "npm run build && npx cap run android --sdk-info",
-    "build:android": "npm run build && gradlew assembleRelease"
+    "build:android": "npm run build &&  cd android && gradlew assembleRelease"
   },
   "dependencies": {
     "@capacitor/android": "^5.7.4",
