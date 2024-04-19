@@ -1,14 +1,41 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
+  "extends": [
+    "@tsconfig/node20/tsconfig.json",
+    "@vue/tsconfig/tsconfig.dom.json"
+  ],
+  "include": [
+    "vite.config.*",
+    "env.d.ts", 
+    "src/**/*", 
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "src/**/*.png",
+    "src/**/*.json",
+    "tests/unit/**/*.ts",
+    "package.json"
+  ],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "composite": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "moduleResolution": "Bundler",
+    "types": ["node", "jsdom"],
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    "verbatimModuleSyntax":false,
+    "baseUrl": ".",
+    
+    "paths": {
+      "@/*": ["src/*"]
     }
-  ]
+  },
+  "files": []
 }
