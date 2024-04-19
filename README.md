@@ -30,6 +30,7 @@ Starter Hub template for Android APK build with Vue3, Mozaic + Capacitor
   - [Unit tests](#unit-tests)
 - [Configuration](#configuration)
   - [Environment variables](#environment-variables)
+- [Plugins] (#plugins-to-native-hardware)
 - [Contributors](#contributors)
 
 
@@ -126,7 +127,14 @@ npm test
 - Docker configuration for kubernetes deploy found in DockerFile
 - Nginx configuration found in /docker/nginx-default.conf
 - Environment variables found in .env.production file
+- Android config file found in android/app/src/main/AndroidManifest.xml
 
+
+## Plugins to native hardware
+
+Capacitor includes plenty plugins to access native hardware, such as device storage or geolocation.
+
+See docs on [Plugins](https://capacitorjs.com/docs/plugins) to search for desired plugin.
 
 
 ## Contributors
